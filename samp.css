@@ -1,0 +1,376 @@
+@import url("//cdn.web-fonts.ge/fonts/archyedt-bold/css/archyedt-bold.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ArchyEDT-Bold", sans-serif;
+}
+
+body {
+    background: url('sampbackground.png') no-repeat center center/cover;
+    color: white;
+    margin: 0 auto; /* Center the body */
+}
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+}
+nav ul li a {
+    color: #C7B5B5; /* Default gray color for non-active links */
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 70px;
+}
+
+nav ul li a.active {
+    color: white; /* Active link will be white */
+    position: relative;
+}
+
+nav ul li a.active::before {
+    content: "";
+    position: absolute;
+    top: -49px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    box-shadow: 0 4px 6px #F2CA02;
+    background-color: #F2CA02;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.logo img {
+    width: 250px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 70px;
+    color: #FCC91B;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: gray;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.yellow {
+    background: linear-gradient(0deg, #F09918 0%, #F9E80C 100%);
+    color: black;
+    border: none;
+}
+
+.black {
+    background-color: black;
+    color: #E5C839;
+    border: 2px solid #E5C839;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.section-two, .section-three {
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.section-two {
+    background-color: #333;
+}
+
+.section-three {
+    background-color: #444;
+}
+
+.section-two h2, .section-three h2 {
+    font-size: 30px;
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+.section-two p, .section-three p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.character-image {
+    order: 1; /* Move the character image to the left */
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-3%);
+    max-width: 50%;
+    text-align: left;
+}
+
+.character-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 250px;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        margin-right: 40px;
+    }
+    h1{
+        font-family: 30px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    p{
+        font-family: 10px;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+
+    .character-image img {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin-top: 270px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+ width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 10px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 18px;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 15px;
+        margin: 10px;
+    }
+    .character-image img {
+        height: auto;
+        display: block;
+        margin-top: 270px;
+        width: 50%;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-20%);
+        max-width: 50%;
+        text-align: left;
+    }
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero h2 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        max-width: 400px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+    .logo img{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 18px;
+        margin-right: 30px;
+    }
+    h1{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 15px;
+        margin: 10px;
+    }
+    p{
+        font-size: 8px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .character-image img {
+        height: auto;
+        display: block;
+        margin-top: 170px;
+        width: 40%;
+    }   
+     .content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-20%);
+        max-width: 50%;
+        text-align: left;
+        margin-top: 50px;
+    }
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 12px;
+        max-width: 350px;
+    }
+
+    .character-image img {
+        margin-top: 150px;
+    }
+}
