@@ -18,24 +18,24 @@
       <span class="bar"></span>
     </div>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#" class="active">მთავარი</a></li>
+      <li><a href="#" class="nav-link active" data-target="section-1">მთავარი</a></li>
+      <li><a href="#" class="nav-link" data-target="section-2">თამაში</a></li>
       <li><a href="#">ფორუმი</a></li>
-      <li><a href="#">თამაში</a></li>
       <li><a href="#">სიახლეები</a></li>
       <li><a href="#">კონტაქტი</a></li>
     </ul>
   </nav>
 
   <!-- Section 1 -->
-  <section class="section section-1">
+  <section class="section section-1" id="section-1">
     <div class="intro-text">
       <div class="character-img">
-        <img src="character.png" alt="Character"> <!-- Replace with your image -->
+        <img src="character.png" alt="Character">
       </div>
       <div class="text-content">
         <h1>გაერთეთ ჩვენს სერვერზე</h1>
         <h2>GENUINE ROLE PLAY</h2>
-        <p>GENUINE ROLE PLAY - გარემო სადაც შეგიძლია თამაში რეალობად აქციო აისურვო შენი ყველა რეალური ოცნება თუ სურვილი რომელიც გაქვს, აქ შეგიძლია შეიძნო სახლი, შეიძინო მანქანები რომლებიც აღჭურვილია უმაღლესი ტექსტურებით, რაც რეალობასთან კავშირს უფრო ძლიერს ხდის</p>
+        <p>GENUINE ROLE PLAY - გარემო სადაც შეგიძლია თამაში რეალობად აქციო აისურვო შენი ყველა რეალური ოცნება თუ სურვილი რომელიც გაქვს, აქ შეგიძლია შეიძნო სახლი, შეიძინო მანქანები რომლებიც აღჭურვილია უმაღლესი ტექსტურებით, რაც რეალობასთან კავშირს უფრო ძლიერს ხდის.</p>
         <div class="button-container">
           <button class="btn-first">თამაშის დაწყება</button>
           <button class="btn-second">პრომო ვიდეო</button>
@@ -45,9 +45,25 @@
   </section>
 
   <!-- Section 2 -->
-  <section class="section section-2">
-    <h1>Section 2</h1>
-    <p>This is the content of Section 2. It could be a blog, gallery, or more detailed content.</p>
+  <section class="section section-2" id="section-2">
+    <div class="container">
+      <h1>DOWNLOAD</h1>
+      <div class="content">
+        <div class="title">თამაშის ჩამოტვირთვა</div>
+        <div class="subtitle">1 დაჭერით</div>
+        <div class="description">
+          გადმოწერეთ <b>GENUINE GAMES</b> ლაუნჩერი და დააინსტალირეთ სერვერის ფაილები.
+        </div>
+        <div class="buttons">
+          <button class="button black-button">პრომო ვიდეო</button>
+          <button class="button yellow-button">GENUINE LAUNCHER ჩამოტვირთვა</button>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="download.png" alt="Car and character">
+      </div>
+      <h1>გადმოწერა</h1>
+    </div>
   </section>
 
   <!-- Section 3 -->
@@ -59,16 +75,23 @@
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('nav ul li a');
-
-        // Set "მთავარი" as active when the page loads
-        links[0].classList.add('active');
+        const links = document.querySelectorAll('.nav-link');
 
         links.forEach(link => {
-            link.addEventListener('click', function() {
-                // Remove 'active' class from all links
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const targetId = link.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+
+                // Remove active class from all links
                 links.forEach(item => item.classList.remove('active'));
-                // Add 'active' class to clicked link
+
+                // Add active class to clicked link (yellow underline effect)
                 link.classList.add('active');
             });
         });
@@ -81,6 +104,22 @@
     hamburgerMenu.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       hamburgerMenu.classList.toggle('active');
+    });
+
+    // Hide/Show navbar on scroll
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-100px"; // Adjust this value based on navbar height
+      } else {
+        navbar.style.top = "0";
+      }
+      
+      lastScrollTop = scrollTop;
     });
   </script>
 </body>
