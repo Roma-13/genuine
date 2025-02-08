@@ -1,79 +1,87 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genuine Role Play</title>
-    <link rel="stylesheet" href="samp.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Sections</title>
+  <link rel="stylesheet" href="samp.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Genuine Role Play Logo">
-        </div>
-        <nav>
-            <ul id="nav-list">
-                <li><a href="#">მთავარი</a></li>
-                <li><a href="#">ფორუმი</a></li>
-                <li><a href="#">თამაშები</a></li>
-                <li><a href="#">საკონტაქტო</a></li>
-            </ul>
-            <div class="burger-menu" id="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
-    
-    <div class="hero-content">
-        <div class="character-image">
-            <img src="character.png" alt="Character Image">
-        </div>
-        <div class="content">
-            <h1>გაერთეთ ჩვენს სერვერზე</h1>
-            <h2>GENUINE ROLE PLAY</h2>
-            <p>
-                GENUINE ROLE PLAY - გარემო სადაც შეგიძლია თამაში რეალობად აქციო აისურვო შენი ყველა რეალური ოცნება თუ სურვილი რომელიც გაქვს, აქ შეგიძლია შეიძნო სახლი, შეიძინო მანქანები რომლებიც აღჭურვილია უმაღლესი ტექსტურებით, რაც რეალობასთან კავშირს უფრო ძლიერს ხდის
-            </p>
-            <div class="buttons">
-                <a href="#" class="btn yellow">თამაშის დაწყება</a>
-                <a href="#" class="btn black">პრომო ვიდეო</a>
-            </div>
-        </div>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" class="logo-img"> <!-- Replace with your logo -->
     </div>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="active">მთავარი</a></li>
+      <li><a href="#">ფორუმი</a></li>
+      <li><a href="#">თამაში</a></li>
+      <li><a href="#">სიახლეები</a></li>
+      <li><a href="#">კონტაქტი</a></li>
+    </ul>
+  </nav>
 
+  <!-- Section 1 -->
+  <section class="section section-1">
+    <div class="intro-text">
+      <div class="character-img">
+        <img src="character.png" alt="Character"> <!-- Replace with your image -->
+      </div>
+      <div class="text-content">
+        <h1>გაერთეთ ჩვენს სერვერზე</h1>
+        <h2>GENUINE ROLE PLAY</h2>
+        <p>GENUINE ROLE PLAY - გარემო სადაც შეგიძლია თამაში რეალობად აქციო აისურვო შენი ყველა რეალური ოცნება თუ სურვილი რომელიც გაქვს, აქ შეგიძლია შეიძნო სახლი, შეიძინო მანქანები რომლებიც აღჭურვილია უმაღლესი ტექსტურებით, რაც რეალობასთან კავშირს უფრო ძლიერს ხდის</p>
+        <div class="button-container">
+          <button class="btn-first">თამაშის დაწყება</button>
+          <button class="btn-second">პრომო ვიდეო</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Section 2 -->
+  <section class="section section-2">
+    <h1>Section 2</h1>
+    <p>This is the content of Section 2. It could be a blog, gallery, or more detailed content.</p>
+  </section>
 
-    <script>
-        // JavaScript to make the first link active on page load and handle active state on click
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const links = document.querySelectorAll('nav ul li a');
-            
-            // Make "მთავარი" link active when the page loads
-            links[0].classList.add('active');
-            
-            // Add event listeners to all the links
-            links.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Remove 'active' class from all links
-                    links.forEach(item => item.classList.remove('active'));
-                    // Add 'active' class to the clicked link
-                    this.classList.add('active');
-                });
+  <!-- Section 3 -->
+  <section class="section section-3">
+    <h1>Section 3</h1>
+    <p>This is the content of Section 3. You can add a call to action or other relevant information.</p>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('nav ul li a');
+
+        // Set "მთავარი" as active when the page loads
+        links[0].classList.add('active');
+
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove 'active' class from all links
+                links.forEach(item => item.classList.remove('active'));
+                // Add 'active' class to clicked link
+                link.classList.add('active');
             });
         });
-        // JavaScript to toggle the burger menu
-window.addEventListener('DOMContentLoaded', (event) => {
-    const burgerMenu = document.getElementById('burger-menu');
-    const nav = document.querySelector('nav');
-    
-    burgerMenu.addEventListener('click', () => {
-        nav.classList.toggle('active');
     });
-});
 
-    </script>
+    // Hamburger menu functionality
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
 
+    hamburgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburgerMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
