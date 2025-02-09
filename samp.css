@@ -23,11 +23,47 @@ body {
   z-index: 1000;
 }
 
+
+
 .logo-img {
   width: 250px;
   margin-left: 150px;
 }
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left p {
+  margin: 0;
+}
+
+.footer-right .footer-social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right .footer-social .social-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-right .footer-social .social-link:hover {
+  color: #f39c12;
+}
 .intro-text {
   display: flex;
   align-items: center;
@@ -44,7 +80,7 @@ body {
 
 .character-img {
   position: absolute;
-  top: 165px;
+  top: 175px;
   left: 0;
   width: 900px;
   height: auto;
@@ -142,6 +178,10 @@ nav ul li a.active {
   padding: 40px 0;
   text-align: left; 
   background-color: white;
+  outline: 2px solid #F5BF12; /* You can change the color and width */
+  background-image: url('news.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .nav-links li a {
@@ -178,7 +218,7 @@ nav ul li a.active::before {
   background-image: url('sampbackground.png');
   background-size: cover;
   background-position: center;
-  height: 950px;
+  height: 960px;
 }
 
 .section-2 {
@@ -273,6 +313,7 @@ nav ul li a.active::before {
 .card {
   width: 300px;
   border-radius: 15px;
+  background-color: rgba(252, 245, 245, 0.815);
   text-align: center;
   border: 3px solid #F5C911;
   color: #222;
@@ -350,9 +391,7 @@ nav ul li a.active::before {
     font-size: 50px;
     margin-left: -800px;
   }
-  .section-3 h2 {
-    display: none;
-  }
+
 }
 
 
@@ -448,9 +487,7 @@ nav ul li a.active::before {
     margin-left: -200px;
     opacity: 0.04;
   }
-  .section-3 h2 {
-    display: none;
-  }
+
 }
 
 @media screen and (max-width:1025px) {
@@ -545,9 +582,7 @@ nav ul li a.active::before {
     margin-left: -200px;
     opacity: 0.04;
   }
-  .section-3 h2 {
-    display: none;
-  }
+
 }
 
 @media screen and (max-width:1024px) {
@@ -643,9 +678,7 @@ nav ul li a.active::before {
     margin-left: -200px;
     opacity: 0.04;
   }
-  .section-3 h2 {
-    display: none;
-  }
+
 }
 
 
@@ -776,9 +809,7 @@ nav ul li a.active::before {
     margin-left: -200px;
     opacity: 0.04;
   }
-  .section-3 h2 {
-    display: none;
-  }
+
 }
 
 
@@ -861,7 +892,9 @@ nav ul li a.active::before {
     font-size: 16px;
   }
   .section-3 h2 {
-    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 10px;
   }
 }
 @media screen and (max-width:400px){
@@ -938,7 +971,9 @@ nav ul li a.active::before {
     font-size: 16px;
   }
   .section-3 h2 {
-    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 10px;
   }
 }
 @media screen and (max-width:375px){
@@ -1011,7 +1046,9 @@ nav ul li a.active::before {
     font-size: 16px;
   }
   .section-3 h2 {
-    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 10px;
   }
 }
 
@@ -1087,6 +1124,15 @@ nav ul li a.active::before {
     justify-content: center; 
   }
   .section-3 h2 {
-    display: none;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 10px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
