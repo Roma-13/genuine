@@ -54,6 +54,7 @@ body {
   background: url('modal.png') no-repeat center center/cover;
   background-size: cover;
   position: relative;
+
 }
 
 #section-4 p{
@@ -128,21 +129,123 @@ body {
 }
 
 
-.footer-right .footer-social {
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* Left Section */
+.footer-left {
+  flex: 1;
+  text-align: left;
+  min-width: 250px;
+}
+
+.footer-left h2 {
+  font-size: 22px;
+  color: #ff4b5c;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* Middle Section - Footer Links */
+.footer-middle {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff4b5c;
+}
+
+/* Right Section - Social Icons */
+.footer-right {
+  flex: 1;
+  text-align: right;
+  min-width: 250px;
+}
+
+.footer-social {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
-.footer-right .footer-social .social-link {
+.footer-social li {
+  display: inline-block;
+}
+
+.footer-social .social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
   color: #fff;
-  font-size: 18px;
-  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.footer-right .footer-social .social-link:hover {
-  color: #f39c12;
+/* Specific Social Media Colors */
+.footer-social .social-link:hover {
+  transform: scale(1.1);
+}
+
+.footer-social .social-link i {
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-link:nth-child(1):hover i { color: #1877f2; } /* Facebook */
+.footer-social .social-link:nth-child(2):hover i { color: #ff0000; } /* YouTube */
+.footer-social .social-link:nth-child(3):hover i { color: #7289da; } /* Discord */
+
+/* Bottom Footer */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  color: #aaa;
 }
 .intro-text {
   display: flex;
@@ -262,6 +365,7 @@ nav ul li a.active {
   background-image: url('news.png');
   background-size: cover;
   background-position: center;
+
 }
 
 .nav-links li a {

@@ -72,7 +72,7 @@
     <h2>სერვერის </h2>
     <div class="cards-container">
       <div class="card">
-        <img src="dwdwd.png" alt="სიახლე 1">
+        <img src="news1.png" alt="სიახლე 1">
         <h3>სერვერის გახსნა</h3>
         <p>GENUINE ROLE PLAY - გარემო სადაც შეგიძლია თამაში რეალობად აქციო აისურვო შენი ყველა რეალური ოცნება თუ სურვილი რომელიც გაქვს, აქ შეგიძლია შეიძნო სახლი, შეიძინო მანქანები რომლებიც აღჭურვილია უმაღლესი ტექსტურებით, რაც რეალობასთან კავშირს უფრო ძლიერს ხდის.</p>
         <span class="upload-date">2024-02-09</span>
@@ -122,21 +122,31 @@
         </div>
     </div>
 </section>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-left">
-        <p>&copy; 2025 GENUINE ROLE PLAY. ყველა უფლება დაცულია.</p>
-      </div>
-      <div class="footer-right">
-        <ul class="footer-social">
-          <li><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-      </div>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <h2>ჩვენს შესახებ</h2>
+      <p>Genuine Role Play - ქართული SAMP პროექტი</p>
     </div>
-  </footer>
+    <!-- Right Section - Social Media Links -->
+    <div class="footer-right">
+      <ul class="footer-social">
+        <li><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="#" class="social-link"><i class="fab fa-discord"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Genuine Games. ყველა უფლება დაცულია.
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -158,6 +168,22 @@
           link.classList.add('active');
         });
       });
+      document.addEventListener('DOMContentLoaded', function() {
+  const footerLinks = document.querySelectorAll('.footer-link');
+
+  footerLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      const targetId = link.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
 
       const hamburgerMenu = document.getElementById('hamburger-menu');
       const navLinks = document.getElementById('nav-links');
