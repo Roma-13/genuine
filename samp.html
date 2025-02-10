@@ -8,10 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar Section -->
   <nav class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Logo" class="logo-img"> <!-- Replace with your logo -->
+      <img src="logo.png" alt="Logo" class="logo-img"> 
     </div>
     <div class="hamburger-menu" id="hamburger-menu">
       <span class="bar"></span>
@@ -23,11 +22,10 @@
       <li><a href="#" class="nav-link" data-target="section-2">თამაში</a></li>
       <li><a href="#">ფორუმი</a></li>
       <li><a href="#" class="nav-link" data-target="section-3">სიახლეები</a></li>
-      <li><a href="#" id="donationLink">დონაცია</a></li>
+      <li><a href="#" class="nav-link" data-target="section-4">დონაცია</a></li>
     </ul>
   </nav>
 
-  <!-- Section 1 -->
   <section class="section section-1" id="section-1">
     <div class="intro-text">
       <div class="character-img">
@@ -45,7 +43,6 @@
     </div>
   </section>
 
-  <!-- Section 2 -->
   <section class="section section-2" id="section-2">
     <div class="container">
       <h1>DOWNLOAD</h1>
@@ -67,7 +64,6 @@
     </div>
   </section>
 
-  <!-- Section 3 -->
   <section class="section section-3" id="section-3">
     <h2>სერვერის </h2>
     <div class="cards-container">
@@ -104,8 +100,24 @@
     </div>
     <h2>სიახლეები</h2>
   </section>
+  <section id="section-4">
+    <div class="container">
+        <h2>დონაცია</h2>
+        <div class="exchange-box">
+            <p>1გელ = 1 Gcoin</p>
+            <input type="text" class="donate-input"placeholder="სახელი">
+            <select>
+                <option>ფული</option>
+                <option>GCoin</option>
 
-  <!-- Footer Section -->
+            </select>
+            <input type="text"class="donate-input" placeholder="შეიყვანეთ თანხა">
+            <button class="donate-button">გადახდა</button>
+            <p>თქვენ გადაიხდით: <span>30</span> ლარს</p>
+            <p>მიიღებთ: <span>5</span> G Coins</p>
+        </div>
+    </div>
+</section>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
@@ -137,15 +149,12 @@
             targetSection.scrollIntoView({ behavior: 'smooth' });
           }
 
-          // Remove active class from all links
           links.forEach(item => item.classList.remove('active'));
 
-          // Add active class to clicked link (yellow underline effect)
           link.classList.add('active');
         });
       });
 
-      // Hamburger menu functionality
       const hamburgerMenu = document.getElementById('hamburger-menu');
       const navLinks = document.getElementById('nav-links');
 
@@ -154,7 +163,6 @@
         hamburgerMenu.classList.toggle('active');
       });
 
-      // Hide/Show navbar on scroll
       let lastScrollTop = 0;
       const navbar = document.querySelector('.navbar');
 
@@ -162,7 +170,7 @@
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > lastScrollTop) {
-          navbar.style.top = "-100px"; // Adjust this value based on navbar height
+          navbar.style.top = "-100px"; 
         } else {
           navbar.style.top = "0";
         }

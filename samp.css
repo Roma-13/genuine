@@ -23,8 +23,6 @@ body {
   z-index: 1000;
 }
 
-
-
 .logo-img {
   width: 250px;
   margin-left: 150px;
@@ -47,6 +45,88 @@ body {
 .footer-left p {
   margin: 0;
 }
+
+
+#section-4 {
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  background: url('modal.png') no-repeat center center/cover;
+  background-size: cover;
+  position: relative;
+}
+
+#section-4 p{
+  font-size: 20px;
+  color:white;
+}
+#section-4 h2 {
+  margin-top: 30px;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+.exchange-box {
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 550px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.exchange-box:hover {
+  transform: scale(1.05);
+}
+
+.donate-input, select, .donate-button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  transform: skewX(-3deg);
+}
+
+.donate-input:focus, select:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0px 0px 8px rgba(255, 152, 0, 0.8);
+}
+
+.donate-button {
+  background: #ff9800;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.donate-button:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+.donate-button:active {
+  background: #cc7a00;
+  transform: scale(1);
+}
+
+.donate-button:focus {
+  outline: none;
+}
+
 
 .footer-right .footer-social {
   list-style: none;
@@ -178,7 +258,7 @@ nav ul li a.active {
   padding: 40px 0;
   text-align: left; 
   background-color: white;
-  outline: 2px solid #F5BF12; /* You can change the color and width */
+  outline: 2px solid #F5BF12; 
   background-image: url('news.png');
   background-size: cover;
   background-position: center;
