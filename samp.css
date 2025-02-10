@@ -889,7 +889,9 @@ nav ul li a.active::before {
     margin-left: -200px;
     opacity: 0.04;
   }
-
+  .section-3 h2{
+    display: none;
+  }
 }
 
 
@@ -971,12 +973,14 @@ nav ul li a.active::before {
     padding: 6px 18px;
     font-size: 16px;
   }
-  .section-3 h2 {
-    font-size: 20px;
-    margin-left: 10px;
-    letter-spacing: 10px;
+  .section-3 h2{
+    display: none;
   }
 }
+
+
+
+
 @media screen and (max-width:400px){
   .logo-img, .character-img {
     display: none;
